@@ -1,0 +1,5 @@
+const express=require("express")
+const app=express()
+const getMethods=require("./routes/getRoutes")
+app.use("/",getMethods)
+app.listen(3000,()=>console.log("server started"))
