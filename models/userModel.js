@@ -16,16 +16,16 @@ const User=mongoose.model("Employee",mongoose.Schema(
         salary:Number,
         city:String,
         pincode:Number,
-
         Address:String
     }
 ))
-const obj1=new User({
-        email:"john@gmail.com",
-        password:"john",
+/*const obj1=new User({
+        email:"john12@gmail.com",
+        password:"john5",
         designation:"SSE",
         salary:20000,
         city:"XXX",
         pincode:6320089,
 })
-obj1.save().then(()=>console.log("created user successfully"))
+obj1.save().then(()=>console.log("created user successfully"))*/
+module.exports=User
