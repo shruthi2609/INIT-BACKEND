@@ -12,9 +12,16 @@ const User=mongoose.model("Employee",mongoose.Schema(
             minlength:[5,"minimum length should be 5"],
             maxlength:10
         },
-        designation:String,
+        designation:{
+            type:String,
+            enum:["SE","SSE","PM","TL"]
+        },
         salary:Number,
         city:String,
+        country:{
+            type:String,
+            default:"IND"
+        },
         pincode:Number,
         Address:String
     }

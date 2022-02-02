@@ -11,6 +11,7 @@ const user1=new User((
         designation:data.designation,
         salary:data.salary,
         city:data.city,
+        country:data.country,
         pincode:data.pincode,
     }
 ))
