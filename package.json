@@ -4,12 +4,14 @@
   "description": "backend",
   "main": "index.js",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
     "hbs": "^4.2.0",
     "jade": "^1.11.0",
     "mongoose": "^6.1.8",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "validator": "^13.7.0"
   },
   "devDependencies": {},
   "scripts": {

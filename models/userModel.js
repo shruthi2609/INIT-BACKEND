@@ -6,11 +6,12 @@ const User=mongoose.model("Employee",mongoose.Schema(
             type:String,
             required:[true,"enter your email"],
             unique:true,
-        },
+            }
+        ,
         password:{
             type:String,
             minlength:[5,"minimum length should be 5"],
-            maxlength:10
+           
         },
         designation:{
             type:String,
