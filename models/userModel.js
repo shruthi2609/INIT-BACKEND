@@ -24,7 +24,11 @@ const User=mongoose.model("Employee",mongoose.Schema(
             default:"IND"
         },
         pincode:Number,
-        Address:String
+        Address:String,
+        active:{
+            type:Boolean,
+            default:true
+        }
     }
 ))
 /*const obj1=new User({
