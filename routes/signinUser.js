@@ -2,6 +2,7 @@ const express=require("express")
 const router=express.Router()
 const User=require("../models/userModel")
 const bcrypt=require("bcrypt")
+const jwt=require("jsonwebtoken")
 router.post("/signin",async (req,res)=>{
     const data=req.body
     const user=await User.findOne({email:data.email})
@@ -10,10 +11,13 @@ router.post("/signin",async (req,res)=>{
     const authenticate= await bcrypt.compare(data.password,user.password)
     console.log(authenticate)
     if(authenticate){
-        res.send("signin successful")
+     const token=   jwt.sign({email:data.email},"jamesbond",{expiresIn:"1h"})
+     console.log(token)
+        res.send({status:true,message:"Signin successfull",token:token})
+
     }
     else{
-        res.send("invalid credentials")
+        res.send({status:false,message:"invalid credentials",token:" "})
     }
 }
 else{
