@@ -14,7 +14,6 @@ router.post("/signin",async (req,res)=>{
      const token=   jwt.sign({email:data.email},"jamesbond",{expiresIn:"1h"})
      console.log(token)
         res.send({status:true,message:"Signin successfull",token:token})
-
     }
     else{
         res.send({status:false,message:"invalid credentials",token:" "})

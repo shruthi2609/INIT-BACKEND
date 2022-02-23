@@ -8,7 +8,7 @@ const decodedtoken=jwt.verify(token,"jamesbond")
 next()
 }
 catch(err){
-    res.send("authorization error , login again")
+    res.send({msg:"authorization error , login again",status:false})
 }
 
 }

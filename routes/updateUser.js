@@ -10,7 +10,7 @@ router.post("/updateUser",authorize,async (req,res)=>{
     console.log(data)
     data.updatedpassword=await bcrypt.hash(data.updatedpassword,7)
     const result2=await User.findByIdAndUpdate(result._id,{country:data.updatedcountry,password:data.updatedpassword})
-    res.send("updated password")
+    res.send({msg:"success",status:true})
 })
 
 router.post("/deactivate",async (req,res)=>{
